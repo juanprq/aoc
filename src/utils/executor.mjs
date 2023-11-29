@@ -52,13 +52,14 @@ import(filePath)
     if (testMode) {
       if (result === module.expectedValue) {
         console.log(chalk.green('Bingo! we hit the mother lode!'));
+        console.log('✅' + chalk.green(` - ${result}`));
       } else {
-        console.log(chalk.bgRedBright('Try again! bad result...'));
+        console.log(chalk.red('Try again! bad result...'));
+        console.log('❌' + chalk.red(` - ${result}`));
       }
     }
 
-    console.log(result)
-    console.log(chalk.green('result copied to clipboard'));
+    console.log(chalk.gray('result copied to clipboard'));
 
     childProcess.exec(`echo "${result}" | pbcopy`);
   });
