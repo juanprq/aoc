@@ -46,8 +46,8 @@ import(filePath)
     console.log(chalk.bgRed(`------ PROBLEM ${problem} ------`));
 
     const inputText = loadInput(dirPath, testMode ? 'test.txt' : 'input.txt');
-    const result = module.default(inputText);
     console.log(chalk.bgGreen('🎅----- RESULT ------🎅'));
+    const result = module.default(inputText);
 
     if (testMode) {
       if (result === module.expectedValue) {
