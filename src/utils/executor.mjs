@@ -58,7 +58,7 @@ import(filePath)
     }
 
     console.log(result)
-    console.log(chalk.green('result copyed to clipboard'));
+    console.log(chalk.green('result copied to clipboard'));
 
     childProcess.exec(`echo "${result}" | pbcopy`);
   });
