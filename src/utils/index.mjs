@@ -31,20 +31,20 @@ export function print3DMatrix(matrix, offset = 0) {
   }
 };
 
+export function initializeMatrix([d, ...others], initialValue = 0) {
+  if (!d) return initialValue;
+
+  return Array.from({ length: d }, () => initializeMatrix(others, initialValue));
+}
+
 export function initialize2DMatrix(rows, cols, initialValue = 0) {
-  const matrix = [];
-
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
-      if (matrix[i]) {
-        matrix[i][j] = initialValue;
-      } else {
-        matrix[i] = [initialValue];
-      }
-    }
-  }
-
-  return matrix;
+  return Array.from(
+    { length: rows },
+    () => Array.from(
+      { length: cols },
+      () => initialValue,
+    )
+  );
 };
 
 export function initialize3DMatrix(depth, rows, cols, initialValue = 0) {
