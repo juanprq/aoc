@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/utils/executor.mjs"
+    "start": "node --env-file=.env src/utils/executor.mjs",
+    "generate": "node --env-file=.env src/utils/generate.mjs"
   },
   "keywords": [],
   "author": "",
