@@ -57,6 +57,8 @@ import(filePath)
         console.log(chalk.red('Try again! bad result...'));
         console.log('❌' + chalk.red(` - ${result}`));
       }
+    } else {
+      console.log(chalk.cyan(result));
     }
 
     console.log(chalk.gray('result copied to clipboard'));
