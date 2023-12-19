@@ -62,3 +62,13 @@ export function rotateNLeft(matrix, n) {
 
   return result;
 }
+
+export function calculateShoelaceArea(points) {
+  let area = 0;
+
+  for (let i = 0; i < points.length - 1; i++) {
+    area += points[i][0] * points[i + 1][1] - points[i][1] * points[i + 1][0];
+  }
+
+  return Math.abs(area) / 2;
+}
