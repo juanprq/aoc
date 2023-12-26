@@ -17,7 +17,9 @@ export function loadInput(dirPath, fileName, separator = '\n') {
 export function print2DMatrix(matrix) {
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[0].length; j++) {
-      process.stdout.write(matrix[i][j].toString());
+      let char = matrix[i][j];
+      if (char === Infinity) char = '∞';
+      process.stdout.write(char.toString());
     }
 
     process.stdout.write('\n');
