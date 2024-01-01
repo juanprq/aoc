@@ -74,3 +74,13 @@ export function calculateShoelaceArea(points) {
 
   return Math.abs(area) / 2;
 }
+
+export function gcd(a, b) {
+  if (b === 0) return a;
+
+  return gcd(b, a % b);
+}
+
+export function mcm(a, b) {
+  return a * b / gcd(a, b);
+}
