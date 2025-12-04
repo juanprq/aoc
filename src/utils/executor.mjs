@@ -1,12 +1,12 @@
 import path from 'node:path';
-import flags from 'flags';
+import * as flags from 'flg';
 import chalk from 'chalk';
 import childProcess from 'node:child_process';
 import { loadInput } from './index.mjs';
 
-flags.defineNumber('y');
-flags.defineNumber('d');
-flags.defineNumber('p');
+flags.defineInteger('y');
+flags.defineInteger('d');
+flags.defineInteger('p');
 flags.defineBoolean('t', false);
 
 flags.parse();
