@@ -1,12 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import flags from 'flags';
 import chalk from 'chalk';
+import * as flags from 'flg';
 
 const cookie = process.env.SESSION_COOKIE;
 
-flags.defineNumber('y');
-flags.defineNumber('d');
+flags.defineInteger('y');
+flags.defineInteger('d');
 
 flags.parse();
 
